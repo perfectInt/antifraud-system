@@ -1,0 +1,13 @@
+package io.sultanov.antifraudsystem.domain.user;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class ChangeUserRoleRequest {
+    private String username;
+    private String role;
+}

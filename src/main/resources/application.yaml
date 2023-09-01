@@ -1,0 +1,17 @@
+server:
+  port: 28852
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:antifraud_db
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+
+jwt:
+  secret:
+    access: ewJq24Vw/33NqwiIEC5KdFD44rMa7S3ScGMPWCli/MUfb3AkS6HVE0bs9FqwUI5gr0MRGb8L5VF+KjpigLcryZJO2+MKKK0Ba5rkgbcioHs=
