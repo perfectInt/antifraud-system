@@ -3,6 +3,7 @@ package io.sultanov.antifraudsystem.api.controllers;
 import io.sultanov.antifraudsystem.domain.transaction.TransactionDto;
 import io.sultanov.antifraudsystem.domain.transaction.TransactionResponse;
 import io.sultanov.antifraudsystem.domain.transaction.TransactionService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +20,7 @@ public class TransactionController {
 
     @PostMapping("/transaction")
     @PreAuthorize("hasAuthority('MERCHANT')")
-    public TransactionResponse postTransaction(@RequestBody TransactionDto transactionDto) {
+    public TransactionResponse postTransaction(@Valid @RequestBody TransactionDto transactionDto) {
         return transactionService.postTransaction(transactionDto);
     }
 }

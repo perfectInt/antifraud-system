@@ -26,6 +26,7 @@ public class AuthService {
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
 
+    @Transactional
     public User registerUser(RegisterDto registerDto) {
         if (userRepository.findUserByUsername(registerDto.getUsername()).isPresent())
             throw new ResponseStatusException(HttpStatus.CONFLICT);

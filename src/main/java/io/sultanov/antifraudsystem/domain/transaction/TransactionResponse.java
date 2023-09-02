@@ -9,4 +9,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class TransactionResponse {
     private String result;
+    private String info;
 }
